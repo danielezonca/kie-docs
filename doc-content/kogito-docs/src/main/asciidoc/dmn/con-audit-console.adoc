@@ -1,0 +1,18 @@
+[id='con-audit-console_{context}']
+= {PRODUCT} Audit Investigation Console
+
+The {PRODUCT} Audit Investigation Console is a user interface for monitoring and investigation of {PRODUCT} models executions.
+
+
+.{PRODUCT} Management Console
+image::kogito/dmn/kogito-audit-console-home.png[Image of Kogito Audit Investigation Console]
+
+You can use the Audit Console to browse models executions, check their execution status, retrieve execution details like decisions outcomes, input data and model preview, and obtain explanation information about how the decisions processed by the execution where made.
+
+The Audit Investigation Console requires your {PRODUCT} services to use the following {PRODUCT} components:
+
+* *{PRODUCT} Trusty Service?*: (...) see
+ifdef::KOGITO[]
+{URL_CONFIGURING_KOGITO}#con-data-index-service_kogito-configuring[_{CONFIGURING_KOGITO}_].
+endif::[]
+

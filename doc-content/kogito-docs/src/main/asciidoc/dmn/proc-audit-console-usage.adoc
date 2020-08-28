@@ -1,0 +1,98 @@
+[id='proc-audit-console-using_{context}']
+= Using the {PRODUCT} Audit Investigation Console to inspect executions
+
+You can use the {PRODUCT} Audit Investigation Console to view model executions details from your {PRODUCT} services. You can run the Audit Console for local {PRODUCT} services or add it to your {PRODUCT} infrastructure on {OPENSHIFT}.
+
+== Prerequisites
+
+.Procedure
+. First step?
+. In a web browser, navigate to `http://localhost:9000` to open the Console. If you modified the configured Trusty UI port, use the modified location.
++
+--
+On OpenShift, navigate to the route URL for the Audit Investigation Console instance.
+--
+
+.{PRODUCT} Audit Investigation Console
+image::kogito/dmn/kogito-audit-console-home.png[Image of Kogito Audit Investigation Console]
+
+== Console Home Page
+
+The Console Home Page contains an overview with a list of all the models executions that have been recorded. The executions list display information like ID, description (currently the name of the executed model), executor name, date of execution and execution status.
+
+.{PRODUCT} Audit Investigation Console Homepage
+image::kogito/dmn/kogito-audit-console-executions.png[Image of Audit Console Homepage]
+
+By default, they are filtered to display only executions from the last month. It is possible to search for a specific execution using its ID, or change the date range filter using the two date pickers in the toolbar. It's also possible to reload the data using the refresh button, in the case new executions are added while browsing the list.
+
+.List of executions
+image::kogito/dmn/kogito-audit-console-overview-toolbar.png[Image of Executions List Toolbar, 700]
+
+By clicking on one of the executions IDs, the {PRODUCT} Audit Investigation Console will display the detail page of the chosen execution.
+
+== Execution Detail
+
+.Execution Detail Page
+image::kogito/dmn/kogito-audit-console-execution-detail.png[Image of Execution Detail page]
+
+On top of the execution Detail page, the header displays the ID of the opened execution, followed by the execution status.
+
+.Execution Header
+image::kogito/dmn/kogito-audit-console-execution-header.png[Image of Execution Detail header]
+
+You can hover the mouse on the execution status to view a tooltip with other generic information like execution time and executor.
+
+.Execution Status Tooltip
+image::kogito/dmn/kogito-audit-console-execution-status-tooltip.png[Image of Execution Status Tooltip, 303]
+
+The detail page of an execution contains four sub-pages: <<Outcomes>>, <<Outcomes Details>>, <<Input Data>> and <<Model Lookup>>. You can access them by the horizontal menu bar under the Execution ID.
+
+A breadcrumb is also present in the header to facilitate navigation between pages.
+
+=== Outcomes
+
+The Outcomes page displays a list of the decisions outcomes present in the current execution. Each outcome is a card containing the output of the decision. You can click on the *View Details* link present on each card to open the Outcome Details section for that specific outcome.
+
+=== Outcomes Details
+
+The Outcome Details section provides information about the decision outcome of executions. Clicking on *Outcomes Details* will open the details page with one of the outcomes pre-selected.
+
+.Outcomes Details Page
+image::kogito/dmn/kogito-audit-console-outcomes-details.png[Image of Outcomes Details page]
+
+You can change which outcome to see using the select input positioned on top.
+
+.Outcomes Selection
+image::kogito/dmn/kogito-audit-console-outcomes-switch.png[Image of Outcomes Selection]
+
+The information available in this page is the outcome output, already displayed in the <<Outcomes>> section, the explanation and the influencing inputs.
+
+=== Explanation
+
+The explanation section delivers insight about how the inputs of the model influenced the decision outcome. A score from -1 to 1 is assigned to each input, representing its positive or negative effect on the decision result.
+This information is presented with the *Features Score Chart*. Positive scores are on the right side of the y-axis, while negatives on the left. Scores values are rounded to the second decimal digit. If you hover on the bars, you can also see the full score value. Next to the chart, the *Features Weight* panel contains the same scores in a tabular view, grouped by positive or negative weight.
+
+.Explanation composed by Features Score Chart and Features Weight
+image::kogito/dmn/kogito-audit-console-explanation.png[Image of Explanation section]
+
+=== Outcome Influencing Inputs
+
+The last part of the Outcome Details page provides a list of the inputs that were considered during the elaboration of the current decision outcome. They usually could be a sub-set of the inputs fed to the model, if not all of them. If the inputs structure is nested, clicking on the *Browse Sections* buttons lets you view different input sections.
+
+.Influencing inputs table and navigation bar
+image::kogito/dmn/kogito-audit-console-influencing-inputs.png[Image of Influencing inputs section]
+
+== Input Data
+
+Input Data displays all the inputs submitted to the model for the current execution, including all those that did not take part in the outcomes processing. For complex input structures, it's possible to browse them section by section via the *Browse Sections* buttons, as it happens for <<Outcome Influencing Inputs>>.
+
+.Input Data Page
+image::kogito/dmn/kogito-audit-console-input-data.png[Image of Inputs Data page]
+
+== Model Lookup
+
+Model Lookup contains a DMN viewer rendering the executed model for inspection.
+
+.Model Lookup with the DMN viewer
+image::kogito/dmn/kogito-audit-console-model-lookup.png[Image of Model Lookup page]
+
