@@ -1,7 +1,7 @@
 [id='con-audit-console_{context}']
 = {PRODUCT} Audit Investigation Console
 
-The {PRODUCT} Audit Investigation Console is a user interface for monitoring and investigation of {PRODUCT} models executions.
+The {PRODUCT} Audit Investigation Console is a user interface for monitoring and investigating {PRODUCT} models executions.
 
 
 .{PRODUCT} Management Console
@@ -11,7 +11,7 @@ You can use the Audit Console to browse models executions, check their execution
 
 The Audit Investigation Console requires your {PRODUCT} services to use the following {PRODUCT} components:
 
-* *{PRODUCT} Trusty Service?*: (...) see
+* *{PRODUCT} Trusty Service?*: (...)
 ifdef::KOGITO[]
 {URL_CONFIGURING_KOGITO}#con-data-index-service_kogito-configuring[_{CONFIGURING_KOGITO}_].
 endif::[]

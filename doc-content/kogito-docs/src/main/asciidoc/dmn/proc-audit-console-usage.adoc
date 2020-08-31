@@ -6,7 +6,7 @@ You can use the {PRODUCT} Audit Investigation Console to view model executions d
 == Prerequisites
 
 .Procedure
-. First step?
+. First step? (...)
 . In a web browser, navigate to `http://localhost:9000` to open the Console. If you modified the configured Trusty UI port, use the modified location.
 +
 --
@@ -25,7 +25,7 @@ image::kogito/dmn/kogito-audit-console-executions.png[Image of Audit Console Hom
 
 By default, they are filtered to display only executions from the last month. It is possible to search for a specific execution using its ID, or change the date range filter using the two date pickers in the toolbar. It's also possible to reload the data using the refresh button, in the case new executions are added while browsing the list.
 
-.List of executions
+.Toolbar to filter executions
 image::kogito/dmn/kogito-audit-console-overview-toolbar.png[Image of Executions List Toolbar, 700]
 
 By clicking on one of the executions IDs, the {PRODUCT} Audit Investigation Console will display the detail page of the chosen execution.
@@ -55,7 +55,7 @@ The Outcomes page displays a list of the decisions outcomes present in the curre
 
 === Outcomes Details
 
-The Outcome Details section provides information about the decision outcome of executions. Clicking on *Outcomes Details* will open the details page with one of the outcomes pre-selected.
+The Outcome Details section provides information about decision outcomes of executions. Clicking on *Outcomes Details* will open the details page with one of the outcomes pre-selected.
 
 .Outcomes Details Page
 image::kogito/dmn/kogito-audit-console-outcomes-details.png[Image of Outcomes Details page]
@@ -70,7 +70,7 @@ The information available in this page is the outcome output, already displayed 
 === Explanation
 
 The explanation section delivers insight about how the inputs of the model influenced the decision outcome. A score from -1 to 1 is assigned to each input, representing its positive or negative effect on the decision result.
-This information is presented with the *Features Score Chart*. Positive scores are on the right side of the y-axis, while negatives on the left. Scores values are rounded to the second decimal digit. If you hover on the bars, you can also see the full score value. Next to the chart, the *Features Weight* panel contains the same scores in a tabular view, grouped by positive or negative weight.
+This information is presented with the *Features Score Chart*. Positive scores are on the right side of the y-axis, while negatives on the left. Scores values are rounded to the second decimal digit. If you hover on the bars, you can also see the full score value. Next to the chart, the *Features Weight* panel contains the same scores in a tabular view, grouped by positive and negative weight.
 
 .Explanation composed by Features Score Chart and Features Weight
 image::kogito/dmn/kogito-audit-console-explanation.png[Image of Explanation section]
