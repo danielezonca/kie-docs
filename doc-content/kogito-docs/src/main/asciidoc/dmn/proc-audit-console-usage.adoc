@@ -96,3 +96,7 @@ Model Lookup contains a DMN viewer rendering the executed model for inspection.
 .Model Lookup with the DMN viewer
 image::kogito/dmn/kogito-audit-console-model-lookup.png[Image of Model Lookup page]
 
+[NOTE]
+====
+The ability to display a model containing another model (like a DMN containing another DMN model or a DMN containing a PMML model) is not yet supported at this moment.
+====
